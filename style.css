@@ -756,6 +756,45 @@ body::before {
 
 
 
+/* --- Estilo de Pegatina Footer --- */
+.footer__badge {
+    position: absolute;
+    bottom: 40px; /* Movido hacia adentro para evitar desbordamiento */
+    left: 30px;   /* Movido hacia adentro para evitar desbordamiento */
+    z-index: 100;
+
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Puppeth;
+    font-weight: 700;
+    font-size: 20px; /* Tamaño ligeramente reducido */
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.1;
+
+    border: 5px solid #ffffff;
+    padding: 20px 35px;
+    border-radius: 40px;
+
+    transform: rotate(-8deg); /* Inclinación de izquierda a derecha (hacia arriba) */
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 1);
+
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+    cursor: pointer;
+}
+
+.footer__badge:hover {
+    transform: rotate(-4deg) scale(1.05);
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.footer__badge:active {
+    transform: rotate(-10deg) scale(0.95);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
 /* =========================================
    Adaptación para Móviles (Max Width: 950px)
    ========================================= */
@@ -859,7 +898,8 @@ body::before {
         margin: 15px 0;
     }
 
-    .header__badge {
+    .header__badge,
+    .footer__badge {
         display: none !important;
         /* Aseguramos que desaparezca por completo */
     }
