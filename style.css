@@ -898,8 +898,7 @@ body::before {
         margin: 15px 0;
     }
 
-    .header__badge,
-    .footer__badge {
+    .header__badge {
         display: none !important;
         /* Aseguramos que desaparezca por completo */
     }
@@ -963,5 +962,17 @@ body::before {
 
     .footer__logo {
         grid-column: auto;
+    }
+
+    .footer__badge {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin: 40px auto 0 auto;
+        font-size: 18px;
+        padding: 20px 30px;
+        transform: rotate(-2deg); /* Inclinación mínima para móvil */
+        max-width: 90%;
+        display: inline-block;
     }
 }
